@@ -8,6 +8,13 @@
 
 <% @estacionamientos.each do |estacionamiento| %>
   <tr>
+    <td><b>Nombre</b></td>
+    <td><b>Dirección</b></td>
+    <td><b>Capacidad</b></td>
+    <td><b>Disponibles</b></td>
+  </tr>
+
+  <tr>
     <td><%= estacionamiento.local %></td>
     <td><%= estacionamiento.direccion %></td>
     <td><%= estacionamiento.capacidad %></td>
