@@ -1,0 +1,31 @@
+<h1>Listing notificaciones</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Mensaje</th>
+    <th>Dia</th>
+    <th>Hora</th>
+    <th>Notificacion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notificaciones.each do |notificacione| %>
+  <tr>
+    <td><%= notificacione.email %></td>
+    <td><%= notificacione.mensaje %></td>
+    <td><%= notificacione.dia %></td>
+    <td><%= notificacione.hora %></td>
+    <td><%= notificacione.notificacion %></td>
+    <td><%= link_to 'Show', notificacione %></td>
+    <td><%= link_to 'Edit', edit_notificacione_path(notificacione) %></td>
+    <td><%= link_to 'Destroy', notificacione, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Notificacione', new_notificacione_path %>

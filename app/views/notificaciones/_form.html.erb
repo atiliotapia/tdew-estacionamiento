@@ -1,0 +1,37 @@
+<%= form_for(@notificacione) do |f| %>
+  <% if @notificacione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@notificacione.errors.count, "error") %> prohibited this notificacione from being saved:</h2>
+
+      <ul>
+      <% @notificacione.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mensaje %><br />
+    <%= f.text_field :mensaje %>
+  </div>
+  <div class="field">
+    <%= f.label :dia %><br />
+    <%= f.text_field :dia %>
+  </div>
+  <div class="field">
+    <%= f.label :hora %><br />
+    <%= f.text_field :hora %>
+  </div>
+  <div class="field">
+    <%= f.label :notificacion %><br />
+    <%= f.text_field :notificacion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

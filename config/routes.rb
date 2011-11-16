@@ -1,5 +1,7 @@
 TdewEstacionamiento::Application.routes.draw do
   
+  resources :notificaciones
+
   get "estacionamientos/contador"
   
   get "estacionamientos/rlocal"
