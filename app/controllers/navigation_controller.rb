@@ -4,5 +4,4 @@ class NavigationController < ApplicationController
 	  @estacionamientos = Estacionamiento.all
   end
 
-
 end

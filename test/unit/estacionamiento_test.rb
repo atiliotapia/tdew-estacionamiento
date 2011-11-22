@@ -30,12 +30,13 @@ class EstacionamientoTest < ActiveSupport::TestCase
   end
   
   test "el estacionamiento no permite el ingreso en capacidad maxima" do
-    e = estacionamientos(:estacionamiento_lleno)
-    b = e.ingreso
-    assert (not b), "se lleno"
+    assert_raise EstacionamientoError do
+      b = estacionamientos(:estacionamiento_lleno).ingreso
+    end
   end
   
-  test "el estacionamiento no permite la salida si esta vacio" do 
+  test "el estacionamiento no permite la salida si esta vacio" do
+    assert false, "Pendiente"
   end
   
 end

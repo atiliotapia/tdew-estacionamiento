@@ -1,0 +1,2 @@
+class EstacionamientoError < StandardError
+end
