@@ -9,6 +9,7 @@
     <td><b>Nombre</b></td>
     <td><b>Número de autos</b></td>
     <td><b>Capacidad Total</b></td>
+    <td><b>Porcentaje</b></td>
     <td><b>Disponible?</b></td>
   </tr>
 
@@ -16,6 +17,7 @@
     <td><%= estacionamiento.local %></td>
     <td><%= estacionamiento.numero_autos %></td>
     <td><%= estacionamiento.capacidad_total %></td>
+    <td><%= estacionamiento.porcentaje %>%</td>
     <td style="color:#006699; font-weight:bolder;"><%= estacionamiento.disponible? %></td>
   </tr>
 <% end %>

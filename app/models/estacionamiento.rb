@@ -1,5 +1,9 @@
 class Estacionamiento < ActiveRecord::Base
   
+  def porcentaje
+    numero_autos * 100.0 / capacidad_total
+  end
+  
   def disponible?
     numero_autos < capacidad_total
   end

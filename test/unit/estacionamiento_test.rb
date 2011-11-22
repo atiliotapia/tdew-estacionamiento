@@ -11,6 +11,12 @@ class EstacionamientoTest < ActiveSupport::TestCase
     assert_equal 1, e.numero_autos
   end
   
+  test "porcentaje capacidad" do
+    e = estacionamientos(:estacionamiento_vacio)
+    e.ingreso
+    assert_equal 10, e.porcentaje
+  end
+  
   test "salida de autos" do
     e = estacionamientos(:estacionamiento_lleno)
     e.salida
