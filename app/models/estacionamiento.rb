@@ -1,3 +1,11 @@
 class Estacionamiento < ActiveRecord::Base
-  has_many :notificacione
+  
+  def disponible?
+    numero_autos < capacidad_total
+  end
+  
+  def ingreso
+    #numero_autos += 1
+  end
+  
 end

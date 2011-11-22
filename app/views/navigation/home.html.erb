@@ -1,24 +1,22 @@
 <h1>¿Quieres saber si hay Estacionamiento disponible en la UPC?</h1>
-<p>Bienevenidos a Estacionamiento UPC, donde podrás saber en el momento que decidas la disponibildad de espacios en los estacionamientos de la UPC.
+<p>Bienvenidos a Estacionamiento UPC, donde podrás saber en el momento que decidas la disponibildad de espacios en los estacionamientos de la UPC.
 </p>
 
 <p>
 <table>
-  
-
-<% @estacionamientos.each do |estacionamiento| %>
+  <% @estacionamientos.each do |estacionamiento| %>
   <tr>
     <td><b>Nombre</b></td>
-    <td><b>Dirección</b></td>
-    <td><b>Capacidad</b></td>
-    <td><b>Disponibles</b></td>
+    <td><b>Número de autos</b></td>
+    <td><b>Capacidad Total</b></td>
+    <td><b>Disponible?</b></td>
   </tr>
 
   <tr>
     <td><%= estacionamiento.local %></td>
-    <td><%= estacionamiento.direccion %></td>
-    <td><%= estacionamiento.capacidad %></td>
-    <td style="color:#006699; font-weight:bolder;"><%= estacionamiento.disponible %></td>
+    <td><%= estacionamiento.numero_autos %></td>
+    <td><%= estacionamiento.capacidad_total %></td>
+    <td style="color:#006699; font-weight:bolder;"><%= estacionamiento.disponible? %></td>
   </tr>
 <% end %>
 </table>

@@ -1,15 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  local: MyString
-  direccion: MyString
-  capacidad: 1
-  disponible: 1
-  mensaje: MyString
-
-two:
-  local: MyString
-  direccion: MyString
-  capacidad: 1
-  disponible: 1
-  mensaje: MyString
+estacionamiento_vacio:
+  local: UPC
+  numero_autos: 0
+  capacidad_total: 10

@@ -1,15 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  email: MyString
-  mensaje: MyString
-  dia: MyString
-  hora: MyString
-  notificacion: MyString
-
-two:
-  email: MyString
-  mensaje: MyString
-  dia: MyString
-  hora: MyString
-  notificacion: MyString

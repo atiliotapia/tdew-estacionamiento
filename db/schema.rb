@@ -16,29 +16,21 @@ ActiveRecord::Schema.define(:version => 20111116052908) do
   create_table "alumnos", :force => true do |t|
     t.string   "codigo"
     t.string   "nombre"
-    t.string   "dias"
-    t.string   "hora"
-    t.string   "notificacion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "estacionamientos", :force => true do |t|
     t.string   "local"
-    t.string   "direccion"
-    t.integer  "capacidad"
-    t.integer  "disponible"
-    t.string   "mensaje"
+    t.integer  "numero_autos"
+    t.integer  "capacidad_total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "notificaciones", :force => true do |t|
-    t.string   "email"
-    t.string   "mensaje"
     t.string   "dia"
     t.string   "hora"
-    t.string   "notificacion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
