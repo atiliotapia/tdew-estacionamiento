@@ -12,6 +12,9 @@ class EstacionamientoTest < ActiveSupport::TestCase
   end
   
   test "salida de autos" do
+    e = estacionamientos(:estacionamiento_lleno)
+    e.salida
+    assert_equal 9, e.numero_autos
   end  
   
   test "el estacionamiento se llena" do
@@ -21,6 +24,9 @@ class EstacionamientoTest < ActiveSupport::TestCase
   end
   
   test "el estacionamiento no permite el ingreso en capacidad maxima" do
+    e = estacionamientos(:estacionamiento_lleno)
+    e.ingreso
+    
   end
   
   test "el estacionamiento no permite la salida si esta vacio" do 

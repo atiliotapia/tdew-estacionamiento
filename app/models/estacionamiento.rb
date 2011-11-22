@@ -9,10 +9,14 @@ class Estacionamiento < ActiveRecord::Base
   end
   
   def ingreso
+    raise "Estacionamiento esta lleno" if no_disponible?
     increment(:numero_autos)
+    assert_raise Exception
   end
   
   def salida
+    decrement(:numero_autos)
   end
+
   
 end

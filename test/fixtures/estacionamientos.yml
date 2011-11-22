@@ -4,3 +4,8 @@ estacionamiento_vacio:
   local: UPC
   numero_autos: 0
   capacidad_total: 10
+
+estacionamiento_lleno:
+  local: UPC
+  numero_autos: 10
+  capacidad_total: 10
