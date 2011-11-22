@@ -15,10 +15,12 @@ class Estacionamiento < ActiveRecord::Base
   def ingreso
     raise EstacionamientoError, "El estacinamiento no permite el ingreso ya que no cuenta con capacidad disponible" if no_disponible?
     increment(:numero_autos)
+    self
   end
   
   def salida
     decrement(:numero_autos)
+    self
   end
 
   

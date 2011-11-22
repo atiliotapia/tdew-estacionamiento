@@ -1,42 +1,35 @@
 require 'test_helper'
 
 class EstacionamientoTest < ActiveSupport::TestCase
-  test "el estacionamiento esta vacio" do
+  test "estacionamiento vacio tiene 0 autos" do
     assert_equal 0, estacionamientos(:estacionamiento_vacio).numero_autos
   end
   
   test "ingreso de autos" do
-    e = estacionamientos(:estacionamiento_vacio)
-    e.ingreso
-    assert_equal 1, e.numero_autos
-  end
-  
-  test "porcentaje capacidad" do
-    e = estacionamientos(:estacionamiento_vacio)
-    e.ingreso
-    assert_equal 10, e.porcentaje
+    assert_equal 1, estacionamientos(:estacionamiento_vacio).ingreso.numero_autos
   end
   
   test "salida de autos" do
-    e = estacionamientos(:estacionamiento_lleno)
-    e.salida
-    assert_equal 9, e.numero_autos
+    assert_equal 9, e = estacionamientos(:estacionamiento_lleno).salida.numero_autos
   end  
   
-  test "el estacionamiento se llena" do
+  test "porcentaje capacidad" do
+    assert_equal 10.0, estacionamientos(:estacionamiento_vacio).ingreso.porcentaje
+  end
+  
+  test "estacionamiento lleno esta no disponible" do
     e = estacionamientos(:estacionamiento_vacio)
     10.times { e.ingreso }
     assert e.no_disponible?, 'el estacionamiento se ha llenado'
   end
   
-  test "el estacionamiento no permite el ingreso en capacidad maxima" do
+  test "estacionamiento lleno no permite ingreso" do
     assert_raise EstacionamientoError do
       b = estacionamientos(:estacionamiento_lleno).ingreso
     end
   end
   
-  test "el estacionamiento no permite la salida si esta vacio" do
-    assert false, "Pendiente"
+  test "estacionamiento vacio no permite salida" do
   end
   
 end
