@@ -4,8 +4,15 @@ class Estacionamiento < ActiveRecord::Base
     numero_autos < capacidad_total
   end
   
+  def no_disponible?
+    numero_autos == capacidad_total
+  end
+  
   def ingreso
-    #numero_autos += 1
+    increment(:numero_autos)
+  end
+  
+  def salida
   end
   
 end
