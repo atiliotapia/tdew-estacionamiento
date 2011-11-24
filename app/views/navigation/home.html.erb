@@ -1,31 +1,9 @@
-<h1>¿Quieres saber si hay Estacionamiento disponible en la UPC?</h1>
-<p>Bienvenidos a Estacionamiento UPC, donde podrás saber en el momento que decidas la disponibildad de espacios en los estacionamientos de la UPC.
-</p>
+<div class="hero-unit">
+<h1>Estacionamiento UPC</h1>
 
+<br />
 <p>
-<table>
   <% @estacionamientos.each do |estacionamiento| %>
-  <tr>
-    <td><b>Nombre</b></td>
-    <td><b>Autos</b></td>
-    <td><b>Capacidad</b></td>
-    <td><b>%</b></td>
-    <td><b>Disponible?</b></td>
-  </tr>
-
-  <tr>
-    <td><%= estacionamiento.local %></td>
-    <td><%= estacionamiento.numero_autos %></td>
-    <td><%= estacionamiento.capacidad_total %></td>
-    <td><%= estacionamiento.porcentaje %>%</td>
-    <td style="color:#006699; font-weight:bolder;"><%= estacionamiento.disponible? %></td>
-  </tr>
-<% end %>
-</table>
-</p>
-<hr>
-<p>
-<div class="well">
-<%= link_to "Desea Configurar sus notificaciones", "alumnos/login"%>
-</div>
+    <%= estacionamiento.local %> - <%= estacionamiento.porcentaje %>%<br />
+  <% end %>
 </p>
