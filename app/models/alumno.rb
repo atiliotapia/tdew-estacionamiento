@@ -1,3 +1,3 @@
 class Alumno < ActiveRecord::Base
-   has_many :notificaione
+   has_many :notificaciones
 end

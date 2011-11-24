@@ -2,30 +2,20 @@
 
 <table>
   <tr>
-    <th>Email</th>
-    <th>Mensaje</th>
-    <th>Dia</th>
-    <th>Hora</th>
-    <th>Notificacion</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @notificaciones.each do |notificacione| %>
+<% @notificaciones.each do |notificacion| %>
   <tr>
-    <td><%= notificacione.email %></td>
-    <td><%= notificacione.mensaje %></td>
-    <td><%= notificacione.dia %></td>
-    <td><%= notificacione.hora %></td>
-    <td><%= notificacione.notificacion %></td>
-    <td><%= link_to 'Show', notificacione %></td>
-    <td><%= link_to 'Edit', edit_notificacione_path(notificacione) %></td>
-    <td><%= link_to 'Destroy', notificacione, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', notificacion %></td>
+    <td><%= link_to 'Edit', edit_notificacion_path(notificacion) %></td>
+    <td><%= link_to 'Destroy', notificacion, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Notificacione', new_notificacione_path %>
+<%= link_to 'New Notificacion', new_notificacion_path %>
