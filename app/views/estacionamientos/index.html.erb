@@ -1,13 +1,16 @@
 <h1>Lista de Estacionamientos</h1>
 
+<p>
+  <%= link_to 'Nuevo Estacionamiento', new_estacionamiento_path %><br />
+  <%= link_to "Contador de Autos", estacionamientos_contador_path %><br />
+</p>
+
 <table>
   <tr>
     <th>Local</th>
-    <th>Direccion</th>
+    <th>Autos</th>
     <th>Capacidad</th>
-    <th>Disponible</th>
-    <th>Mensaje</th>
-    <th></th>
+    <th>%</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,18 +18,12 @@
 <% @estacionamientos.each do |estacionamiento| %>
   <tr>
     <td><%= estacionamiento.local %></td>
-    <td><%= estacionamiento.direccion %></td>
-    <td><%= estacionamiento.capacidad %></td>
-    <td><%= estacionamiento.disponible %></td>
-    <td><%= estacionamiento.mensaje %></td>
+    <td><%= estacionamiento.numero_autos %></td>
+    <td><%= estacionamiento.capacidad_total %></td>
+    <td><%= estacionamiento.porcentaje %></td>
     <td><%= link_to 'Ver', estacionamiento %></td>
     <td><%= link_to 'Editar', edit_estacionamiento_path(estacionamiento) %></td>
-    <td><%= link_to 'Borrar', estacionamiento, confirm: 'Esta seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'Nuevo Estacionamiento', new_estacionamiento_path %> | 
-<%= link_to 'Volver', '../estacionamientos/home_operador' %>
