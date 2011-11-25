@@ -1,9 +1,17 @@
 <div class="hero-unit">
 <table>
+	<tr>
+	<td>Local<td/>
+	<td>Porcentaje<td/>
+	<td>Status<td/><tr/>
   <% @estacionamientos.each do |estacionamiento| %>
   	<tr>
     	<td><h2><%= estacionamiento.local %><h2 /><td/>
-    	<td><h2><%= estacionamiento.porcentaje %>%<h2/><td/>
+    	<td><h2><%= estacionamiento.porcentaje %><h2/><td/>
+    	
+    	<td>
+    		<%=image_tag "green.png" %>
+    	<td/>
     <tr/>
   <% end %>
  </table>
