@@ -30,6 +30,9 @@ class EstacionamientoTest < ActiveSupport::TestCase
   end
   
   test "estacionamiento vacio no permite salida" do
+     assert_raise EstacionamientoError do
+      b = estacionamientos(:estacionamiento_vacio).salida
+    end
   end
   
 end

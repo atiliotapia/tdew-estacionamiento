@@ -1,5 +1,10 @@
 <div class="hero-unit">
+<table>
   <% @estacionamientos.each do |estacionamiento| %>
-    <h2><%= estacionamiento.local %> - <%= estacionamiento.porcentaje %>%<h2 />
+  	<tr>
+    	<td><h2><%= estacionamiento.local %><h2 /><td/>
+    	<td><h2><%= estacionamiento.porcentaje %>%<h2/><td/>
+    <tr/>
   <% end %>
+ </table>
 </div>
