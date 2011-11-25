@@ -6,6 +6,18 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <%= javascript_include_tag 'jquery' %>  
+  <%= javascript_include_tag 'rails' %>
+   <script type="text/javascript">      
+      $(function() {
+        $("li").click(function() {          
+          $("li").removeClass("active");
+          $(this).addClass("active");
+        });   
+      });   
+   </script>
+
 </head>
 
 <body>
@@ -15,7 +27,7 @@
         <a class="brand" href="/">Estacionamientos UPC</a>
         <ul class="nav">
           <li class="active"><%= link_to "Inicio", root_path %></li>
-          <li><%= link_to "Estacionamientos", estacionamientos_path %></li>
+          <li ><%= link_to "Estacionamientos", estacionamientos_path %></li>
         </ul>
       </div>
     </div>
