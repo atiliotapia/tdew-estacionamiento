@@ -86,9 +86,16 @@ class EstacionamientosController < ApplicationController
   end
   
   def ingreso
+      @estacionamiento = Estacionamiento.find(params[:id])
+      Estacionamiento.transaction do
+        @estacionamiento.ingreso
+        @estacionamiento.save
+      end
+      redirect_to estacionamientos_contador_url
   end
   
   def salida
+
   end
   
 end

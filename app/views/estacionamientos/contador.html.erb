@@ -3,7 +3,7 @@
   <div class="input">
     Seleccionar Local: <select class="large" name="mediumSelect" id="mediumSelect">
       <% @estacionamientos.each do |estacionamiento|%>
-      <option><%= estacionamiento.local %></option>
+      <option value="<%= estacionamiento.id %>"><%= estacionamiento.local %></option>
       <% end %>
     </select>
   </div>

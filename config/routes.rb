@@ -1,15 +1,13 @@
 TdewEstacionamiento::Application.routes.draw do
   root :to => 'navigation#home'
-  
+
   get "estacionamientos/contador"
-  get "estacionamientos/rlocal"
-  get "estacionamientos/home_operador"
-  get "alumnos/configuracion"
-  get "alumnos/login"
-  
+  match "estacionamientos/ingreso/:id" => "estacionamientos#ingreso"
   resources :notificaciones
   resources :alumnos
   resources :estacionamientos
+
+
 
 
   # The priority is based upon order of creation:
