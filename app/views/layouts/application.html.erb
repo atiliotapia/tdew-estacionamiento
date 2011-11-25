@@ -12,7 +12,7 @@
   <div class="topbar">
     <div class="fill">
       <div class="container">
-        <a class="brand" href="#">Estacionamientos UPC</a>
+        <a class="brand" href="/">Estacionamientos UPC</a>
         <ul class="nav">
           <li class="active"><%= link_to "Inicio", root_path %></li>
           <li><%= link_to "Estacionamientos", estacionamientos_path %></li>
@@ -26,6 +26,15 @@
       <%= yield %>
     </div>
   </div>
+  <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+          <a href="http://www.upc.edu.pe">
+            <%=image_tag "upc.gif" %>
+          </a>
+        </p>        
+      </div>
+  </footer>
 
 </body>
 </html>
