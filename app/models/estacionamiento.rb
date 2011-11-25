@@ -12,6 +12,10 @@ class Estacionamiento < ActiveRecord::Base
     numero_autos == capacidad_total
   end
   
+  def vacio?
+    numero_autos == 0
+  end
+
   def ingreso
     raise EstacionamientoError, "El estacinamiento no permite el ingreso ya que no cuenta con capacidad disponible" if no_disponible?
     increment(:numero_autos)
@@ -19,6 +23,7 @@ class Estacionamiento < ActiveRecord::Base
   end
   
   def salida
+     raise EstacionamientoError, "El estacinamiento se encuentra vacio" if vacio?
     decrement(:numero_autos)
     self
   end
