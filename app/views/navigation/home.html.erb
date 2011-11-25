@@ -10,14 +10,12 @@
     	<td><h2><%= estacionamiento.porcentaje %><h2/><td/>
     	
     	<td>
-    		<% if estacionamiento.porcentaje < 33 %>
-    			<%= image_tag "green.png" %>
+    		<% if estacionamiento.porcentaje > 66 %>
+    			<%=image_tag "red.png" %>
+    		<% elsif estacionamiento.porcentaje < 33 %>
+    			<%=image_tag "green.png" %>
     		<% else %>
-    			<% if estacionamiento.porcentaje > 33 || estacionamiento.porcentaje < 66 %>
-    				<%=image_tag "yellow.png" %>
-    			<% else %>
-    				<%=image_tag "red.png" %>
-    			<% end %>
+    			<%=image_tag "yellow.png" %>    			
     		<% end %>
     	<td/>
     <tr/>
