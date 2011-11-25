@@ -5,6 +5,7 @@ class UserMailer < ActionMailer::Base
   	@user = user
   	@url  = "http://www.gmail.com"
   	mail(:to=>user.email, :subject=>"Bienvenido")
+  	
   end
 
 end
