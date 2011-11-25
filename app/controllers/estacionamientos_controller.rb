@@ -81,16 +81,14 @@ class EstacionamientosController < ApplicationController
     end
   end
 
-  def rlocal
-  #link_to "login", "navigation/login"
-  end
-
   def contador
-  @estacionamientos = Estacionamiento.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @estacionamientos }
-    end
+    @estacionamientos = Estacionamiento.all
   end
+  
+  def ingreso
+  end
+  
+  def salida
+  end
+  
 end
