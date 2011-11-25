@@ -4,27 +4,14 @@
   <b>Local:</b>
   <%= @estacionamiento.local %>
 </p>
-
 <p>
-  <b>Direccion:</b>
-  <%= @estacionamiento.direccion %>
+  <b>Cantidad de Autos:</b>
+  <%= @estacionamiento.numero_autos %>
 </p>
-
 <p>
-  <b>Capacidad:</b>
-  <%= @estacionamiento.capacidad %>
+  <b>Capacidad Total:</b>
+  <%= @estacionamiento.capacidad_total %>
 </p>
-
-<p>
-  <b>Disponible:</b>
-  <%= @estacionamiento.disponible %>
-</p>
-
-<p>
-  <b>Mensaje:</b>
-  <%= @estacionamiento.mensaje %>
-</p>
-
 
 <%= link_to 'Editar', edit_estacionamiento_path(@estacionamiento) %> |
 <%= link_to 'Volver', estacionamientos_path %>
