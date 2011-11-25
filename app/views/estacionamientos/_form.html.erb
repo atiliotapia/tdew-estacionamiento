@@ -11,18 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :local %><br />
-    <%= f.text_field :local %>
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :local %></label>
+    <div class="input">
+      <%= f.text_field :local %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :numero_autos %><br />
-    <%= f.number_field :numero_autos %>
+
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :numero_autos %></label>
+    <div class="input">
+      <%= f.number_field :numero_autos %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :capacidad_total %><br />
-    <%= f.number_field :capacidad_total %>
+
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :capacidad_total %></label>
+    <div class="input">
+      <%= f.number_field :capacidad_total %>
+    </div>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
