@@ -1,23 +1,18 @@
 <div class="hero-unit">
 <table>
 	<tr>
-	<td>Status<td/>
-	<td>Local<td/>
-	<td>Porcentaje<td/>	<tr/>
+	  <th>Status</th>
+	  <th>Local</th>
+	  <th>Porcentaje</th>
+	<tr/>
   <% @estacionamientos.each do |estacionamiento| %>
   	<tr>
   		<td>
-    		<% if estacionamiento.porcentaje > 66 %>
-    			<%=image_tag "red.png" %>
-    		<% elsif estacionamiento.porcentaje < 33 %>
-    			<%=image_tag "green.png" %>
-    		<% else %>
-    			<%=image_tag "yellow.png" %>    			
-    		<% end %>
-    	<td/>
-    	<td><h2><%= estacionamiento.local %><h2 /><td/>
-    	<td><h2><%= estacionamiento.porcentaje %><h2/><td/>    	    	
-    <tr/>
+    		<%=image_tag status_image(estacionamiento) %>    			
+    	</td>
+    	<td><h2><%= estacionamiento.local %></h2></td>
+    	<td><h2><%= estacionamiento.porcentaje %></h2></td>    	    	
+    </tr>
   <% end %>
  </table>
 </div>
