@@ -2,51 +2,37 @@
 <html>
 <head>
   <title>Estacionamientos UPC</title>
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+  
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <%= javascript_include_tag 'jquery' %>  
-  <%= javascript_include_tag 'rails' %>
-   <script type="text/javascript">      
-      $(function() {
-        $("li").click(function() {          
-          $("li").removeClass("active");
-          $(this).addClass("active");
-        });   
-      });   
-   </script>
-
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="fill">
-      <div class="container">
-        <a class="brand" href="/">Estacionamientos UPC</a>
-        <ul class="nav">
-          <li class="active"><%= link_to "Inicio", root_path %></li>
-          <li ><%= link_to "Estacionamientos", estacionamientos_path %></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <div data-role="page">
 
-  <div class="container">
-    <div class="content">
-      <%= yield %>
-    </div>
-  </div>
-  <footer class="footer">
-      <div class="container">
-        <p class="pull-right">
-          <a href="http://www.upc.edu.pe">
-            <%=image_tag "upc.gif" %>
-          </a>
-        </p>        
-      </div>
-  </footer>
+  	<div data-role="header">
+  	  <%= link_to "Inicio", root_path, "data-icon" => "home" %>
+  		<h1>Estacionamientos UPC</h1>
+  	</div><!-- /header -->
+  	<div data-role="content">	
+  		<%= yield %>		
+  	</div><!-- /content -->
+  	
+  	<div data-role="footer">		
+    	<div data-role="navbar">
+    		<ul>
+    			<li><%= link_to "Ingreso/Salida", estacionamientos_contador_path %></li>
+    			<li><%= link_to "Estacionamientos", estacionamientos_path %></li>
+    		</ul>
+    	</div><!-- /navbar -->
+    </div><!-- /footer -->
+
+  </div><!-- /page -->
 
 </body>
 </html>

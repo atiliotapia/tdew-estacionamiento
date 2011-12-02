@@ -8,10 +8,10 @@
     </select>
   </div>
 </p>
-<HR>
-  <P>
-    <%= link_to "Ingreso", estacionamientos_path, class:"btn large primary" %>
-    <%= link_to "Salida", estacionamientos_path, class:"btn large danger" %>
-  </P>
-  <HR>
-  <%= link_to "Volver", estacionamientos_path %>
+
+<div data-role="navbar">
+	<ul>
+		<li><%= link_to "Ingreso", estacionamientos_path, "data-icon" => "forward" %></li>
+		<li><%= link_to "Salida", estacionamientos_path, "data-icon" => "back" %></li>
+	</ul>
+</div><!-- /navbar -->

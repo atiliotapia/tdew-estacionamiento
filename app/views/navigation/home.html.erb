@@ -1,18 +1,7 @@
-<div class="hero-unit">
-<table>
-	<tr>
-	  <th>Status</th>
-	  <th>Local</th>
-	  <th>Porcentaje</th>
-	<tr/>
-  <% @estacionamientos.each do |estacionamiento| %>
-  	<tr>
-  		<td>
-    		<%=image_tag status_image(estacionamiento) %>    			
-    	</td>
-    	<td><h2><%= estacionamiento.local %></h2></td>
-    	<td><h2><%= estacionamiento.porcentaje %></h2></td>    	    	
-    </tr>
-  <% end %>
- </table>
+<div data-role="listview">
+<% @estacionamientos.each do |estacionamiento| %>
+  <li>
+    <%= estacionamiento.local %> - <%= estacionamiento.porcentaje %> %
+  </li>
+<% end %>
 </div>
