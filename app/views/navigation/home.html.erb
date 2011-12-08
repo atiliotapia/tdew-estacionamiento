@@ -1,7 +1,16 @@
 <div data-role="listview">
 <% @estacionamientos.each do |estacionamiento| %>
-  <li>
-    <%= estacionamiento.local %> - <%= estacionamiento.porcentaje %> %
+  <li>  	
+  	<table>
+  		<tr>
+  			<td>
+  				<%=image_tag status_image(estacionamiento) %>  
+  			</td>
+  			<td>
+    			<%= estacionamiento.local %> - <%= estacionamiento.porcentaje %> %
+    		</td>
+    	</tr>
+    </table>
   </li>
 <% end %>
 </div>

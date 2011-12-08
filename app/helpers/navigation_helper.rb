@@ -2,11 +2,11 @@ module NavigationHelper
   
   def status_image(estacionamiento)
     if estacionamiento.porcentaje > 66
-  	  "red.png"
+  	  	"red.gif"
   	elsif estacionamiento.porcentaje < 33
-  		"green.png"
+  		"green.gif"
   	else
-  		"yellow.png"
+  		"yellow.gif"
   	end
   end
   
