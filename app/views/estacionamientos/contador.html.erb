@@ -8,14 +8,14 @@
       <option value="<%= estacionamiento.id %>"><%= estacionamiento.local %></option>
       <% end %>
     </select>
-    <label></label>
+    <label id="lblId"></label>
   </div>
 </p>
 
 <div data-role="navbar">
-	<ul>
-		<li><%= link_to "Ingreso", estacionamientos_path, "data-icon" => "forward" %></li>
-		<li><%= link_to "Salida", estacionamientos_path, "data-icon" => "back" %></li>
+	<ul>   
+		<li><%= link_to "Ingreso", estacionamientos_path+"/ingreso/1", "data-icon" => "forward" %></li>
+		<li><%= link_to "Salida", estacionamientos_path+"/salida/1", "data-icon" => "back" %></li>
 	</ul>
 </div><!-- /navbar -->
 
@@ -23,9 +23,9 @@
     $("select").change(function () {          
           var str = "";
           $("select option:selected").each(function () {
-                str += $(this).val() + " ";                                                
+                str = $(this).val() + " ";                                                
               });
-          $("label").text("Id: "+str);
+          $("label").text(str);
         })
         .trigger('change');
 </script>
