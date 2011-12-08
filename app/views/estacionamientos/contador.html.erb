@@ -1,11 +1,14 @@
 <h1>Ingresos y Salidas de Autos</h1>
 <p>
   <div class="input">
-    Seleccionar Local: <select class="large" name="mediumSelect" id="mediumSelect">
+    Seleccionar Local: 
+
+    <select class="large" name="mediumSelect" id="mediumSelect">
       <% @estacionamientos.each do |estacionamiento|%>
       <option value="<%= estacionamiento.id %>"><%= estacionamiento.local %></option>
       <% end %>
     </select>
+    <label></label>
   </div>
 </p>
 
@@ -15,3 +18,14 @@
 		<li><%= link_to "Salida", estacionamientos_path, "data-icon" => "back" %></li>
 	</ul>
 </div><!-- /navbar -->
+
+<script>
+    $("select").change(function () {          
+          var str = "";
+          $("select option:selected").each(function () {
+                str += $(this).val() + " ";                                                
+              });
+          $("label").text("Id: "+str);
+        })
+        .trigger('change');
+</script>
