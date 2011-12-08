@@ -32,12 +32,10 @@
                 
             });
         var btnSalida = $("#btnSalida");        
-                btnSalida.click(function (e) {                  
-                var str = "";
-                $("select option:selected").each(function () {
-                  str = $(this).val() + " ";                                                
-                });                
-                window.open("/estacionamientos/salida/"+str, "_self");
+                btnSalida.click(function (e) {                                  
+                $("select option:selected").each(function () {                  
+                  window.open("/estacionamientos/salida/"+$(this).val(), "_self");
+                });                                
             });
               
 </script>
