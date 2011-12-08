@@ -13,19 +13,31 @@
 </p>
 
 <div data-role="navbar">
-	<ul>   
-		<li><%= link_to "Ingreso", estacionamientos_path+"/ingreso/1", "data-icon" => "forward" %></li>
-		<li><%= link_to "Salida", estacionamientos_path+"/salida/1", "data-icon" => "back" %></li>
+	<ul>   	    
+    <li>
+      <button id="btnIngreso" data-icon="forward" data-theme="a" data-form="ui-btn-up-a" class="ui-btn-hidden" aria-disabled="false">Ingreso</button>
+    </li>
+    <li>
+      <button id="btnSalida" data-icon="back" data-theme="a" data-form="ui-btn-up-a" class="ui-btn-hidden" aria-disabled="false">Salida</button>
+    </li>
 	</ul>
 </div><!-- /navbar -->
 
 <script>
-    $("select").change(function () {          
-          var str = "";
-          $("select option:selected").each(function () {
-                str = $(this).val() + " ";                                                
-              });
-          $("label").text(str);
-        })
-        .trigger('change');
+        var btnIngreso = $("#btnIngreso");        
+                btnIngreso.click(function (e) {                                  
+                $("select option:selected").each(function () {
+                  window.open("/estacionamientos/ingreso/"+$(this).val(), "_self");
+                });                
+                
+            });
+        var btnSalida = $("#btnSalida");        
+                btnSalida.click(function (e) {                  
+                var str = "";
+                $("select option:selected").each(function () {
+                  str = $(this).val() + " ";                                                
+                });                
+                window.open("/estacionamientos/salida/"+str, "_self");
+            });
+              
 </script>
