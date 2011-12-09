@@ -7,6 +7,7 @@ class CreateEstacionamientos < ActiveRecord::Migration
       t.string :address
       t.float :longitude
       t.float :latitude
+      t.boolean :gmaps
       t.timestamps
     end
   end

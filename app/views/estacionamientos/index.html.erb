@@ -12,6 +12,9 @@
     <th>Autos</th>
     <th>Capacidad</th>
     <th>%</th>
+    <th>Direccion</th>
+    <th>Longitud</th>
+    <th>Latitud</th>
     <th></th>
     <th></th>
   </tr>
@@ -22,9 +25,12 @@
     <td><%= estacionamiento.numero_autos %></td>
     <td><%= estacionamiento.capacidad_total %></td>
     <td><%= estacionamiento.porcentaje %></td>
+    <td><%= estacionamiento.address %></td>
+    <td><%= estacionamiento.longitude %></td>
+    <td><%= estacionamiento.latitude %></td>
     <td><%= link_to 'Ver', estacionamiento %></td>
     <td><%= link_to 'Editar', edit_estacionamiento_path(estacionamiento) %></td>
   </tr>
 <% end %>
 </table>
-
+<%= gmaps4rails(@json) %>

@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(:version => 20111209061647) do
     t.string   "local"
     t.integer  "numero_autos"
     t.integer  "capacidad_total"
+<<<<<<< HEAD
+=======
+    t.string   "address"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.boolean  "gmaps"
+>>>>>>> 0a031df9e0cb85048e996cc086ac7499878f5a27
     t.datetime "created_at"
     t.datetime "updated_at"
   end
