@@ -104,5 +104,12 @@ class EstacionamientosController < ApplicationController
       end
       redirect_to estacionamientos_contador_url
   end
+
+  def sendx
+     #@estacionamiento = Estacionamiento.find(params[:id])
+    @user = "eddysz200@gmail.com" #aqui se envián los emails
+    UserMailer.welcome_email(@user).deliver
+    redirect_to estacionamientos_contador_url
+  end
   
 end
