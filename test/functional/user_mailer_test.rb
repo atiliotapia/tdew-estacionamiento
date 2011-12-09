@@ -13,8 +13,8 @@ class UserMailerTest < ActionMailer::TestCase
  
     # Test the body of the sent email contains what we expect it to
     assert_equal [user.email], email.to
-    assert_equal "Welcome to My Awesome Site", email.subject
-    assert_match(/<h1>Welcome to example.com, #{user.name}<\/h1>/, email.encoded)
-    assert_match(/Welcome to example.com, #{user.name}/, email.encoded)
+    assert_equal "Bienbenido a TDEW-Estacionamientos", email.subject
+    assert_match(/<h1>Bienbenido a tdew-estacionamientos.heroku.com, #{user.name}<\/h1>/, email.encoded)
+    assert_match(/Bienbenido a TDEW-Estacionamientos, #{user.name}/, email.encoded)
   end
 end
