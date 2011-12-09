@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124212220) do
+ActiveRecord::Schema.define(:version => 20111209061647) do
 
   create_table "alumnos", :force => true do |t|
     t.string   "codigo"

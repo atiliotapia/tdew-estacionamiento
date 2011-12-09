@@ -3,8 +3,9 @@
 #
 # Examples:
 #
+
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Estacionamiento.create(local: 'UPC', numero_autos: 2, capacidad_total: 10, address: 'av tal', longitude: 0, latitude: 0)
-Estacionamiento.create(local: 'Los Alamos', numero_autos: 5, capacidad_total: 10, address: 'av tal', longitude: 0, latitude: 0)
-Estacionamiento.create(local: 'Otro', numero_autos: 90, capacidad_total: 100, address: 'av tal', longitude: 0, latitude: 0)
+Estacionamiento.create(local: 'UPC', numero_autos: 2, capacidad_total: 10)
+Estacionamiento.create(local: 'Los Alamos', numero_autos: 5, capacidad_total: 10)
+Estacionamiento.create(local: 'Otro', numero_autos: 90, capacidad_total: 100)
