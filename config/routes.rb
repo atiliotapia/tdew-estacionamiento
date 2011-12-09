@@ -1,4 +1,6 @@
 TdewEstacionamiento::Application.routes.draw do
+  devise_for :users
+
   root :to => 'navigation#home'
 
   get "estacionamientos/contador"
