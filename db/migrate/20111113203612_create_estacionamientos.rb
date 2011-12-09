@@ -4,6 +4,9 @@ class CreateEstacionamientos < ActiveRecord::Migration
       t.string :local
       t.integer :numero_autos
       t.integer :capacidad_total
+      t.string :address
+      t.float :longitude
+      t.float :latitude
       t.timestamps
     end
   end

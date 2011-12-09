@@ -2,17 +2,11 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-require 'gmaps4rails/bing.js'
+require 'gmaps4rails'
 
-require 'gmaps4rails/googlemaps.js'
+require 'geokit'
 
-require 'gmaps4rails/mapquest.js'
-
-require 'gmaps4rails/openlayers.js'
-
-require 'gmaps4rails/all_apis.js'
-
-#require 'gmaps4rails'
+#require 'gmaps4rails/all_apis.js'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
