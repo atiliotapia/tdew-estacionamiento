@@ -9,6 +9,8 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<%= yield :head %>
+
 
 </head>
 
@@ -21,6 +23,7 @@
   	</div><!-- /header -->
   	<div data-role="content">	
   		<%= yield %>		
+
   	</div><!-- /content -->
   	
   	<div data-role="footer">		
@@ -31,8 +34,7 @@
     		</ul>
     	</div><!-- /navbar -->
     </div><!-- /footer -->
-
+<%= yield :scripts %>
   </div><!-- /page -->
-
 </body>
 </html>

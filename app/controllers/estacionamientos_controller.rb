@@ -4,6 +4,8 @@ class EstacionamientosController < ApplicationController
   def index
     @estacionamientos = Estacionamiento.all
 
+    @json = Estacionamiento.all.to_gmaps4rails
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @estacionamientos }

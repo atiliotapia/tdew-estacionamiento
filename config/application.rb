@@ -2,6 +2,18 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require 'gmaps4rails/bing.js'
+
+require 'gmaps4rails/googlemaps.js'
+
+require 'gmaps4rails/mapquest.js'
+
+require 'gmaps4rails/openlayers.js'
+
+require 'gmaps4rails/all_apis.js'
+
+#require 'gmaps4rails'
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require *Rails.groups(:assets => %w(development test))
@@ -48,6 +60,8 @@ module TdewEstacionamiento
     config.assets.version = '1.0'
 
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+
+
 
   end
 end

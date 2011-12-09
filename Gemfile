@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 gem 'jquery-rails'
 gem 'minitest'
+gem 'gmaps4rails'
 
 # Usamos postgres para Heroku en Producción
 group :production do
