@@ -32,7 +32,38 @@
     </div>
   </div>
 
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :address %></label>
+    <div class="input">
+      <%= f.text_field :address %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :longitude %></label>
+    <div class="input">
+      <%= f.text_field :longitude %>
+    </div>
+  </div>
+
+<div class="clearfix">
+    <label for="xlInput"><%= f.label :latitude %></label>
+    <div class="input">
+      <%= f.text_field :latitude %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <label for="xlInput"><%= f.label :gmaps %></label>
+    <div class="input">
+      <%= f.text_field :gmaps %>
+    </div>
+  </div>
+  <%= gmaps4rails(@json) %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
