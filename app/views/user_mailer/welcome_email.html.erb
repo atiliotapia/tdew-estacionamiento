@@ -1,18 +1,36 @@
-#### welcome_email.html.erb 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  </head>
+<head>
+  <title>Notificacion - Estacionamientos UPC</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+  
+
+
+
+</head>
   <body>
-    <h1>Welcome to tdew-estacionamientos.heroku.com, <%= @name %></h1>
-    <p>
-      You have successfully signed up to tdew-estacionamientos.heroku.com,
-      your username is: <%= @login %>.<br/>
-    </p>
-    <p>
-      To login to the site, just follow this link: <%= @url %>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+  <div data-role="page">
+
+    <div data-role="header">
+      <%= link_to "Inicio", root_path, "data-icon" => "home" %>
+      <h1>Estacionamientos UPC</h1>
+    </div><!-- /header -->
+    <div data-role="content"> 
+      <%= yield %>    
+
+    </div><!-- /content -->
+    
+    <div data-role="footer">    
+      <div data-role="navbar">
+        <ul>
+          <li><%= link_to "Ingreso/Salida", estacionamientos_contador_path %></li>
+          <li><%= link_to "Estacionamientos", estacionamientos_path %></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!-- /footer -->
+<%= yield :scripts %>
+  </div><!-- /page -->
   </body>
 </html>
