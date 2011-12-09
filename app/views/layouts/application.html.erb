@@ -14,7 +14,18 @@
   </script>
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
   <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<style>
+ul.hmenu { 
+  margin: 0 0 2em;
+  padding: 0;
+  text-align: right;
+}
 
+ul.hmenu li {
+  display: inline;  
+}
+
+</style>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -28,6 +39,23 @@
 
   	<div data-role="header">
   	  <%= link_to "Inicio", root_path, "data-icon" => "home" %>
+      <ul class="hmenu">
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>    
+        </li>    
+      <% else %>
+      <li>
+        <%= link_to "Login", new_user_session_path %>  
+        </li>
+        <li>       
+        <%= link_to 'Register', new_user_registration_path %>
+        </li>
+      <% end %>
+      </ul>
+
+
+
   		<h1>Estacionamientos UPC</h1>
   	</div><!-- /header -->
   	<div data-role="content">	
