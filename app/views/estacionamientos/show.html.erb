@@ -12,7 +12,20 @@
   <b>Capacidad Total:</b>
   <%= @estacionamiento.capacidad_total %>
 </p>
+<p>
+  <b>Dirección:</b>
+  <%= @estacionamiento.address %>
+</p>
 
+<p>
+  <b>Longitud:</b>
+  <%= @estacionamiento.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @estacionamiento.latitude %>
+</p>
 
 <%= link_to 'Editar', edit_estacionamiento_path(@estacionamiento) %> |
 <%= link_to 'Volver', estacionamientos_path %>
