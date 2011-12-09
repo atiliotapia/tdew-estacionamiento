@@ -1,4 +1,8 @@
 class EstacionamientosController < ApplicationController
+    
+before_filter :authenticate_user! 
+
+
   # GET /estacionamientos
   # GET /estacionamientos.json
   def index

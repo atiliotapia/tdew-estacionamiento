@@ -1,7 +1,23 @@
 TdewEstacionamiento::Application.routes.draw do
+
+  devise_for :user do 
+    get "/login", :to => "devise/sessions#new" 
+  end 
+
+  devise_for :user do 
+    get "/logout", :to => "devise/sessions#destroy" 
+  end 
+
+  devise_for :user do 
+    get "/register", :to => "devise/registrations#new" 
+  end 
+
   devise_for :users
 
+  
   root :to => 'navigation#home'
+
+  #root :to => 'navigation#home'
 
   get "estacionamientos/contador"
   match "estacionamientos/ingreso/:id" => "estacionamientos#ingreso"
@@ -12,7 +28,7 @@ TdewEstacionamiento::Application.routes.draw do
   resources :alumnos
   resources :estacionamientos
 
-
+ 
 
 
   # The priority is based upon order of creation:

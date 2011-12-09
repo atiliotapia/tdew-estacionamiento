@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-source 'http://gemcutter.org'
 
 gem 'rails', '3.1.0'
 gem 'jquery-rails'
