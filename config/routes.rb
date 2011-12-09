@@ -4,6 +4,8 @@ TdewEstacionamiento::Application.routes.draw do
   get "estacionamientos/contador"
   match "estacionamientos/ingreso/:id" => "estacionamientos#ingreso"
   match "estacionamientos/salida/:id" => "estacionamientos#salida"
+  # envio de correos
+  match "estacionamientos/sendx/:id" => "estacionamientos#sendx"
   resources :notificaciones
   resources :alumnos
   resources :estacionamientos

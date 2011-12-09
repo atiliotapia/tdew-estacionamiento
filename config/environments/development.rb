@@ -13,6 +13,18 @@ TdewEstacionamiento::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+  # configuracion de salida de mensajes
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :authentication => :plain,
+    :domain => 'tdew-estacionamientos.heroku.com',
+    :user_name => 'eddysz2000@gmail.com',
+    :password => 'caracteres'
+  }
+
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 

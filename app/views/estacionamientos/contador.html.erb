@@ -20,6 +20,9 @@
     <li>
       <button id="btnSalida" data-icon="back" data-theme="a" data-form="ui-btn-up-a" class="ui-btn-hidden" aria-disabled="false">Salida</button>
     </li>
+    <li>
+      <button id="btnSend" data-icon="back" data-theme="a" data-form="ui-btn-up-a" class="ui-btn-hidden" aria-disabled="false">Prueba de Envío Correo</button>
+    </li>
 	</ul>
 </div><!-- /navbar -->
 
@@ -37,5 +40,12 @@
                   window.open("/estacionamientos/salida/"+$(this).val(), "_self");
                 });                                
             });
+
+        var btnSalida = $("#btnSend");        
+                btnSalida.click(function (e) {                                  
+                $("select option:selected").each(function () {                  
+                  window.open("/estacionamientos/sendx/"+$(this).val(), "_self");
+                });                                
+            });    
               
 </script>
